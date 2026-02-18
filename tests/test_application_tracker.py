@@ -9,8 +9,6 @@ from job_application_agent.tools.application_tracker import (
     TRACKER_FILE,
     DATA_DIR,
 )
-
-
 @pytest.fixture(autouse=True)
 def clean_tracker():
     """Remove tracker file before and after each test."""
@@ -19,8 +17,6 @@ def clean_tracker():
     yield
     if os.path.exists(TRACKER_FILE):
         os.remove(TRACKER_FILE)
-
-
 class TestAddApplication:
     def test_add_basic(self):
         result = add_application("Google", "Software Engineer")
