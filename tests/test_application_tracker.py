@@ -23,15 +23,12 @@ class TestAddApplication:
         assert "Google" in result
         assert "Software Engineer" in result
         assert "#1" in result
-
     def test_add_with_status(self):
         result = add_application("Meta", "Frontend Dev", status="screening")
         assert "screening" in result
-
     def test_add_with_notes(self):
         result = add_application("Amazon", "SDE", notes="Referred by friend")
         assert "Amazon" in result
-
     def test_add_multiple(self):
         add_application("Google", "SWE")
         result = add_application("Meta", "SWE")
