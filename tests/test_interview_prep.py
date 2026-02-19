@@ -37,7 +37,6 @@ class TestGetInterviewQuestions:
     def test_empty_role_uses_default(self):
         result = get_interview_questions(role="", tech="python")
         assert "Technical Questions" in result
-
     def test_empty_tech_uses_default(self):
         result = get_interview_questions(role="developer", tech="")
         assert "Technical Questions" in result
